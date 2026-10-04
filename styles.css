@@ -1,0 +1,88 @@
+:root {
+  --bg: #000a27;
+  --bg-raised: #071636;
+  --line: #16305f;
+  --text: #eaf2ff;
+  --muted: #a4b6d6;
+  --cyan: #38c6ff;
+  --amber: #ffb224;
+  --max: 1040px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--cyan); }
+a:focus-visible, .button:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+/* Cabecera */
+.site-header { border-bottom: 1px solid var(--line); }
+.site-header .wrap { display: flex; align-items: center; gap: 12px; min-height: 68px; }
+.brand { display: flex; align-items: center; gap: 12px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 1.2rem; margin-right: auto; }
+.brand img { width: 40px; height: 40px; border-radius: 10px; }
+.brand span span { color: var(--cyan); }
+.site-header nav { display: flex; gap: 18px; font-size: 0.95rem; }
+.site-header nav a { color: var(--muted); text-decoration: none; }
+.site-header nav a:hover { color: var(--text); }
+
+/* Portada */
+.hero { padding: 56px 0 40px; }
+.hero h1 { font-size: clamp(2.1rem, 6vw, 3.4rem); line-height: 1.1; margin: 0 0 16px; letter-spacing: -0.02em; text-wrap: balance; }
+.hero h1 em { font-style: normal; color: var(--cyan); }
+.hero p.lead { font-size: 1.2rem; color: var(--muted); max-width: 60ch; margin: 0 0 28px; }
+.hero img { display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); margin-top: 40px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.button { display: inline-block; padding: 14px 24px; border-radius: 12px; font-weight: 700; text-decoration: none; }
+.button.primary { background: var(--cyan); color: #00122e; }
+.button.ghost { border: 1px solid var(--line); color: var(--text); }
+.soon { color: var(--amber); font-weight: 600; }
+
+/* Secciones */
+section { padding: 48px 0; border-top: 1px solid var(--line); }
+section h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin: 0 0 8px; letter-spacing: -0.01em; }
+section > .wrap > p.intro { color: var(--muted); max-width: 65ch; margin: 0 0 28px; }
+
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.card { background: var(--bg-raised); border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+.card h3 { margin: 0 0 6px; font-size: 1.1rem; }
+.card p { margin: 0; color: var(--muted); }
+.card .mark { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--cyan); margin-right: 8px; }
+.card.private .mark { background: var(--amber); }
+
+ol.steps { counter-reset: step; list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+ol.steps li { counter-increment: step; background: var(--bg-raised); border: 1px solid var(--line); border-radius: 16px; padding: 22px; color: var(--muted); }
+ol.steps li::before { content: counter(step); display: block; font-size: 1.6rem; font-weight: 800; color: var(--cyan); margin-bottom: 4px; }
+ol.steps li strong { display: block; color: var(--text); margin-bottom: 4px; }
+
+.notice { background: var(--bg-raised); border: 1px solid var(--amber); border-radius: 16px; padding: 22px; }
+.notice h2 { color: var(--amber); font-size: 1.3rem; }
+.notice ul { margin: 12px 0 0; padding-left: 20px; color: var(--muted); }
+.notice li { margin-bottom: 6px; }
+
+/* Documento (privacidad) */
+.doc { max-width: 72ch; padding: 40px 20px 64px; margin: 0 auto; }
+.doc h1 { font-size: clamp(1.8rem, 5vw, 2.4rem); line-height: 1.2; margin: 0 0 4px; }
+.doc .updated { color: var(--muted); margin: 0 0 28px; }
+.doc h2 { font-size: 1.25rem; margin: 32px 0 8px; color: var(--cyan); }
+.doc ul { padding-left: 20px; }
+.doc li { margin-bottom: 6px; }
+
+footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 0.95rem; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+footer p { margin: 0; flex: 1 1 100%; }
+
+@media (max-width: 560px) {
+  .site-header nav a.hide-small { display: none; }
+  .hero { padding-top: 36px; }
+}

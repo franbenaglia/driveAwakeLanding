@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DriveAwake — Stay alert on every drive</title>
+<meta name="description" content="DriveAwake watches for signs of tiredness with your phone’s front camera and alerts you while you drive. Private, on-device and offline.">
+<meta name="theme-color" content="#000a27">
+<link rel="canonical" href="https://franbenaglia.github.io/driveAwakeLanding/">
+<link rel="alternate" hreflang="es" href="https://franbenaglia.github.io/driveAwakeLanding/es.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DriveAwake — Stay alert on every drive">
+<meta property="og:description" content="DriveAwake watches for signs of tiredness with your phone’s front camera and alerts you while you drive. Private, on-device and offline.">
+<meta property="og:image" content="https://franbenaglia.github.io/driveAwakeLanding/DriveAwake-Google-Play-Feature-Graphic-1024x500.png">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+// Español si el navegador está en español; inglés en cualquier otro caso.
+// Solo en la primera visita, para que el enlace de idioma siga funcionando.
+try {
+  if (!sessionStorage.getItem('lang') && navigator.language.toLowerCase().startsWith('es')) {
+    sessionStorage.setItem('lang', 'es');
+    location.replace('es.html');
+  }
+} catch (e) {}
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="icon-192.png" alt="" width="40" height="40"><span>Drive<span>Awake</span></span></a>
+    <nav><a href="#features" class="hide-small">Features</a><a href="#how" class="hide-small">How it works</a><a href="privacy.html">Privacy</a><a href="es.html" lang="es">Español</a></nav>
+  </div>
+</header>
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <h1>Stay alert on <em>every drive</em></h1>
+      <p class="lead">DriveAwake uses your phone’s front camera to watch for signs of tiredness while you drive, and warns you with sound, vibration and voice. It keeps working while your navigation app is on screen.</p>
+      <div class="actions">
+        <span class="soon">Coming soon to Google Play</span>
+        <a class="button ghost" href="#how">See how it works</a>
+      </div>
+      <img src="DriveAwake-Google-Play-Feature-Graphic-1024x500.png" width="1024" height="500" alt="DriveAwake running on a phone mounted on a car dashboard at night">
+    </div>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>What it watches for</h2>
+      <p class="intro">DriveAwake never alerts on a single blink or yawn. It combines several signals over time into a risk level.</p>
+      <div class="grid"><div class="card"><h3><span class="mark"></span>Eye closure</h3><p>Notices when your eyes stay closed longer than a normal blink, and how much of the last minute they were closed.</p></div><div class="card"><h3><span class="mark"></span>Yawns</h3><p>Counts repeated yawns within a few minutes and tells them apart from talking.</p></div><div class="card"><h3><span class="mark"></span>Head nods</h3><p>Detects your head dropping, and raises the alarm at once if your eyes are closed too.</p></div><div class="card"><h3><span class="mark"></span>Eyes off the road</h3><p>Reminds you to look ahead if your head stays turned away for several seconds.</p></div><div class="card"><h3><span class="mark"></span>Works with your navigation</h3><p>Start a trip, then open Google Maps, Waze or any other app. Monitoring continues in the background.</p></div><div class="card"><h3><span class="mark"></span>Calibrated to you</h3><p>A 16-second guided calibration adapts detection to your face and to where your phone is mounted.</p></div><div class="card private"><h3><span class="mark"></span>Private by design</h3><p>Images are analysed on your phone and discarded at once. Nothing is recorded or uploaded.</p></div><div class="card private"><h3><span class="mark"></span>Fully offline</h3><p>No account, no server, no ads. The app does not even request Internet permission.</p></div></div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="intro">Set it up before you start driving. Once it is running you do not need to touch the phone.</p>
+      <ol class="steps"><li><strong>Mount your phone</strong>Place it in a holder where the front camera can see your face.</li><li><strong>Calibrate once</strong>Follow the spoken instructions for 16 seconds.</li><li><strong>Start trip</strong>Check the preview shows your face, then open your navigation app.</li><li><strong>Drive</strong>If signs of tiredness appear, DriveAwake alerts you. Stop it from the notification when you arrive.</li></ol>
+    </div>
+  </section>
+
+  <section id="safety">
+    <div class="wrap">
+      <div class="notice">
+        <h2>Know its limits</h2>
+        <p>DriveAwake is a preventive, complementary assistance tool. It is not a medical device, it does not guarantee that tiredness will be detected, and it is no substitute for rest.</p>
+        <ul><li>In low light or at night the front camera sees your face poorly and detection becomes unreliable.</li><li>With dark glasses your eyes cannot be measured.</li><li>There may be false alerts, and signs of tiredness that go undetected.</li><li>If you feel sleepy, stop in a safe place.</li></ul>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <a href="privacy.html">Privacy</a>
+    <a href="https://github.com/franbenaglia/driveAwakeLanding/issues">Contact</a>
+    <a href="es.html" lang="es">Español</a>
+    <p>DriveAwake is not a medical device.</p>
+  </div>
+</footer>
+</body>
+</html>
