@@ -86,3 +86,8 @@ footer p { margin: 0; flex: 1 1 100%; }
   .site-header nav a.hide-small { display: none; }
   .hero { padding-top: 36px; }
 }
+
+/* Descarga */
+.meta { color: var(--muted); font-size: 0.95rem; margin: 14px 0 0; }
+.meta code { display: inline-block; margin-top: 6px; font-size: 0.85rem; color: var(--text); overflow-wrap: anywhere; }
+.download-actions { margin: 24px 0 0; }
